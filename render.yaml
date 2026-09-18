@@ -38,7 +38,3 @@ services:
         value: "1"
       - key: TIKTOK_PROXIES
         value: ""
-    disk:
-      name: wa-data
-      mountPath: /opt/render/project/src/data
-      sizeGB: 1
