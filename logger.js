@@ -11,7 +11,7 @@ export const log = {
   wa: (m) => console.log(chalk.hex("#25d366")("[wa]") + " " + m),
   tt: (m) => console.log(chalk.hex("#ff0050")("[tt]") + " " + m),
   banner: () => {
-    console.log(chalk.magenta.bold("\n  🕯️ void reporter"));
+    console.log(chalk.magenta.bold("\n  рџ•ЇпёЏ void reporter"));
     console.log(chalk.gray("  telegram В· whatsapp В· tiktok вЂ” max pressure\n"));
   },
 };
