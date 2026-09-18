@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: void-reporter
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: npm install --ignore-scripts
+    startCommand: node index.js
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_IDS
+        sync: false
+      - key: BOT_IMAGE_URL
+        sync: false
+      - key: TG_SESSION_1
+        sync: false
+      - key: JOBS_PER_HOUR
+        value: "3"
+      - key: DEFAULT_CONCURRENCY
+        value: "50"
+      - key: DEFAULT_WAVE_SIZE
+        value: "100"
+      - key: DEFAULT_WAVE_COOLDOWN
+        value: "2"
+      - key: DELAY_MIN
+        value: "0.1"
+      - key: DELAY_MAX
+        value: "0.5"
+      - key: MAX_RETRIES
+        value: "1"
+      - key: TIKTOK_PROXIES
+        value: ""
+    disk:
+      name: wa-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
