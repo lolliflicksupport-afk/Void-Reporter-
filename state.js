@@ -72,4 +72,4 @@ export const rand = (min, max) => Math.random() * (max - min) + min;
 export function liveTgSessions() {
   const now = Date.now() / 1000;
   return [...TG_STATE.values()].filter((s) => !s.dead && s.floodUntil < now);
-    }
+}
